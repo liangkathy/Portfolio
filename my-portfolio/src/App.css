@@ -1,1 +1,25 @@
+* {
+    box-sizing: border-box;
+   
+    font-family: "Lato", sans-serif;
+}
 
+body {
+    margin: 0;
+    padding: 0;  
+    overflow-x: hidden;
+}
+
+section {
+    position: relative;
+    padding: 5vw;
+    min-height: 350px;
+}
+
+.hidden {
+    display: none;
+}
+
+h3 {
+    font-size: 3em;
+}

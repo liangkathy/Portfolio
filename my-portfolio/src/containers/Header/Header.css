@@ -1,0 +1,27 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    padding: 0 10px 0 10px;
+    align-items: center;
+    height: 90px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 997;
+    background-color: inherit;
+}
+
+.logo-text {
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    letter-spacing: 1.5px;
+    font-size: 1.8em;
+    color: #2e6283;
+}
+
+.logo-text-dark {
+    color: white;
+}

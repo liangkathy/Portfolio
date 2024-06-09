@@ -1,0 +1,108 @@
+.project-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    border-radius: 50px;
+    padding: 40px 70px 40px 70px;
+    position: relative;
+    top: 0;
+    transition: top ease 0.5s;
+}
+.card-left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.project-card:hover {
+    top: -5px;
+}
+
+.card-dark {
+    background-color: rgba(174, 89, 126, 0.4);
+    border: 1px solid rgb(162, 86, 119);
+}
+
+.card-dark:hover {
+    background-color: rgba(174, 89, 126, 0.8);
+}
+
+.card-light {
+    background-color: rgba(235, 189, 203, 0.4);
+    border: 1px solid rgb(229, 196, 205);
+}
+
+.card-light:hover {
+    background-color: rgba(235, 189, 203, 0.8);
+}
+
+/* #project1-light {
+    background-color: rgb(210, 234, 247);
+}
+
+#project1-dark {
+    background-color: #3d4e6aff;
+}
+
+#project2-light {
+    background-color: #d1abb7ff;
+}
+
+#project2-dark {
+    background-color: #97344b;
+}
+
+#project3-light {
+    background-color: #f8c0a0;
+}
+
+#project3-dark {
+    background-color: #b46361;
+}
+
+#project4-light {
+    background-color: #BDCDD0;
+}
+
+#project4-dark {
+    background-color: #392645;
+} */
+
+.project-buttons {
+    display: flex;
+    gap: 30px;
+}
+
+.project-title {
+    font-size: 1.5em;
+    padding: 0;
+    margin: 0;
+}
+
+.project-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 50px;
+    padding: 40px 70px 40px 70px;
+    position: relative;
+}
+
+.long-summary {
+    word-wrap: break-word;
+}
+
+.close-details, .see-more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+}
+
+.close-details {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}

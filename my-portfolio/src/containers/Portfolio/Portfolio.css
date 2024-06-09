@@ -1,0 +1,24 @@
+.portfolio-section {
+    text-align: center;
+    padding: 100px;
+}
+
+.portfolio-dark {
+    background-color: #80425dff;
+    color: white;
+}
+
+.portfolio-light {
+    background-color: #ebd1d9ff;
+    color: #001220;
+}
+
+.project-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+

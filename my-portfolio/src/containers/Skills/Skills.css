@@ -1,0 +1,68 @@
+.skills-section {
+    text-align: center;
+}
+
+.skills-dark {
+    background-color: #80425dff;
+    color: white;
+}
+
+.skills-light {
+    background-color: #ebd1d9ff;
+    color: #001220;
+    
+}
+
+.skills-content {
+    margin-top: 50px;
+    padding: 100px;
+}
+
+.skills-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skill-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.wave2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.wave2 svg {
+    position: relative;
+    display: block;
+    width: calc(138% + 1.3px);
+    height: 111px;
+}
+
+.wave2 .shape-fill-dark {
+    fill: #52154E;
+}
+
+.wave2 .shape-fill-light {
+    fill: rgb(189, 206, 208);
+}
+
+.subtitle {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.learning-list {
+    list-style: none;
+    margin-left: -30px;
+    font-size: 1.1em;
+}

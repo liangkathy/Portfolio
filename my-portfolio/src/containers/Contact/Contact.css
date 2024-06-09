@@ -1,0 +1,74 @@
+.contact-section {
+    height: auto;
+    padding: 50px;
+    text-align: center;
+}
+
+.contact-dark {
+    background-color: #dd7853;
+    color: white;
+    background-image: url('../../assets/waves-dark.svg')
+}
+
+.contact-light {
+    background-color: #fffaf0;
+    color: #001220;
+    background-image: url('../../assets/waves-light.svg');
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    margin: 10px;
+    align-items: center;
+}
+
+textarea {
+    resize: none;
+    padding-top: 8px;
+}
+
+input {
+    height: 2.5em;
+} 
+
+input, textarea {  
+    border-radius: 3px;
+    background-color: rgba(240, 248, 255, 0.537);
+    border: 0.2px solid rgb(210, 221, 231);
+    width: 70%;
+    padding-left: 8px;
+}
+
+input::placeholder, textarea::placeholder {
+    color: rgb(63, 45, 62);
+}
+
+.light input, .light textarea {
+    background-color: rgba(209, 161, 161, 0.537);
+    border: 0.2px solid rgb(239, 177, 177);
+}
+
+input:focus, textarea:focus {
+    outline: 1.2px solid #ff748b;
+    background-color: rgba(240, 248, 255, 0.85);
+}
+
+.error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    font-size: 0.8em;
+    margin: 0;
+}
+
+.error-dark {
+    color: hsl(181, 100%, 75%);
+}
+
+.error-light {
+    color: rgb(224, 0, 0);
+}

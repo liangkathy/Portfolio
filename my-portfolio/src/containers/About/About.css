@@ -1,0 +1,18 @@
+.about-section {
+
+}
+
+.about-dark {
+    background-color: #52154e;
+    color: white;
+}
+
+.about-light {
+    background-color: rgb(189, 206, 208);
+    color: #001220;
+}
+
+.about-content {
+    margin-top: 50px;
+    padding: 150px;
+}

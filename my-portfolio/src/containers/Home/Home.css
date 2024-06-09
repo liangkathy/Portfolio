@@ -1,0 +1,48 @@
+.home-section {
+    height: 100vh;
+    padding-top: 100px;
+}
+
+.home-dark {
+    background-color: #001220;
+    color: white;
+}
+
+.home-light {
+    background-color: #edf8ffff;
+    color: #001220;
+}
+
+.home-intro {
+    padding: 100px;
+    font-size: 1.3em;
+}
+
+h2 {
+    font-size: 2.5em;
+}
+
+.wave1 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.wave1 svg {
+    position: relative;
+    display: block;
+    width: calc(138% + 1.3px);
+    height: 111px;
+}
+
+.wave1 .shape-fill-dark {
+    fill: #52154E;
+}
+
+.wave1 .shape-fill-light {
+    fill: rgb(189, 206, 208);
+}
