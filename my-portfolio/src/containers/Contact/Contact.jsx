@@ -75,8 +75,7 @@ const Contact = () => {
               setSendError("Error sending email")
             },
           );
-        
-        
+
       }
 
     return (
@@ -85,9 +84,8 @@ const Contact = () => {
                 <h3>Contact</h3>
                 
             {
-                isMessageSent ? <div>Thank you for reaching out to me! I will respond to your email as soon as possible.</div> :
+                isMessageSent ? <div>Message sent. Thank you for reaching out to me!</div> :
                 <>
-                    <div>Want to get in touch?</div>
                     {
                         sendError && <div className={`error-${theme} error`}><BsExclamationCircle />{sendError}</div>
                     }

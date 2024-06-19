@@ -1,8 +1,8 @@
 
-const SkillCard = ({logo, skillName}) => {
+const SkillCard = ({logo, skillName, theme}) => {
     return (
         <div className="skill-card">
-            <div>{logo}</div>
+            <div id={`skill-icon-${theme}`}>{logo}</div>
             <div>{skillName}</div>
         </div>
     )

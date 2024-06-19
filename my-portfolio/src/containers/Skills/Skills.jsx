@@ -1,4 +1,5 @@
 import SkillCard from "./SkillCard/SkillCard"
+import Slider from "react-slick";
 
 import { useContext } from "react"
 import { ThemeContext } from "../../contexts/ThemeContext"
@@ -13,12 +14,44 @@ import { FaGithub } from "react-icons/fa";
 import { SiIntellijidea } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
 import { HiCommandLine } from "react-icons/hi2";
+import { FaGears } from "react-icons/fa6";
 
 import './Skills.css'
-
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const Skills = () => {
     const {theme} = useContext(ThemeContext)
+
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 8,
+        slidesToScroll: 2,
+        autoplay: true,
+        autoplaySpeed: 2500,
+        responsive: [
+            {
+                breakpoint: 1200, 
+                settings: {
+                    slidesToShow: 6,
+                }
+            },
+            {
+                breakpoint: 800, 
+                settings: {
+                    slidesToShow: 4,
+                }
+            },
+            {
+                breakpoint: 500, 
+                settings: {
+                    slidesToShow: 2,
+                }
+            }
+        ]
+      };
 
     const skills = [
         {
@@ -64,6 +97,10 @@ const Skills = () => {
         {
             name: "Command Line",
             logo: <HiCommandLine size="4em"/>
+        },
+        {
+            name: "REST API",
+            logo: <FaGears size="4em"/>
         }
     ]
 
@@ -78,22 +115,24 @@ const Skills = () => {
             </div>
             <div className="skills-content">
                 <h3>Skills & Tools</h3>
-                <div className="skills-container">
-                {
-                    skills.map((skill, i) => {
-                        return <SkillCard key={i} skillName={skill.name} logo={skill.logo} />
-                    })
-                }
+                <div className="slider-container">
+                    <Slider {...settings}>
+                    {
+                        skills.map((skill, i) => {
+                            return <SkillCard key={i} skillName={skill.name} logo={skill.logo} theme={theme}/>
+                        })
+                    }
+                    </Slider>
                 </div>
             </div>
-            <div className="skills-content">
-            <div className="subtitle">Things I'm currently learning: </div>
-            <ul>
-                <li className="learning-list">Example</li>
-                <li className="learning-list">Example</li>
-                <li className="learning-list">Example</li>
-            </ul>
-            </div>
+            {/* <div className="skills-content">
+                <div className="subtitle">Things I'm currently learning: </div>
+                <ul>
+                    <li className="learning-list">Example</li>
+                    <li className="learning-list">Example</li>
+                    <li className="learning-list">Example</li>
+                </ul>
+            </div> */}
         </section>
     )
 }

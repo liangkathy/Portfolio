@@ -10,20 +10,23 @@
 .skills-light {
     background-color: #ebd1d9ff;
     color: #001220;
-    
+}
+
+#skill-icon-light {
+    color: rgb(45, 98, 131);
 }
 
 .skills-content {
     margin-top: 50px;
-    padding: 100px;
+    padding: 80px 50px 80px 50px;
 }
 
-.skills-container {
+/* .skills-container {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
     justify-content: center;
-}
+} */
 
 .skill-card {
     display: flex;
@@ -65,4 +68,8 @@
     list-style: none;
     margin-left: -30px;
     font-size: 1.1em;
+}
+
+button.slick-prev:before, button.slick-next:before {
+    color: #a8aabc !important;
 }

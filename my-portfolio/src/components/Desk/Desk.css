@@ -104,3 +104,10 @@
         right: 50px;
     }
 }
+
+@media screen and (min-width: 950px) {
+    .desk {
+        height: 70%;
+        min-height: 500px;
+    }
+}

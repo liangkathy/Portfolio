@@ -6,14 +6,25 @@ import { Link } from 'react-router-dom'
 import { useContext } from 'react'
 import { ThemeContext } from '../../../contexts/ThemeContext'
 
-const ProjectDetails = ({id, title, long, src, alt, GitHubURL, URL, toggleExpand}) => {
+const ProjectDetails = ({id, title, long, src, alt, GitHubURL, URL, toggleExpand, tags, video}) => {
     const {theme} = useContext(ThemeContext)
 
     return (
         <div id={`${id}-${theme}`} className={`project-details card-${theme}`}>
             <Link className={`${theme}-link close-details`} onClick={toggleExpand}><IoClose size="1.5em"/>Close details</Link>
             <h4 className='project-title'>{title}</h4>
-            <img className="project-img" src={image} alt={alt} width="200px"/>
+            {
+                video != "" ?
+                <video width="75%"
+                    autoPlay
+                    muted
+                    loop
+                    >
+                    <source src={video} type='video/mp4'/>
+                </video> :
+                <img className="project-img" src={src == "" ? image : src} alt={alt} width="75%"/>
+            }
+            
             <div className='long-summary'>{long}</div>
             <div className='project-buttons'>
                 <Link to={GitHubURL} target="_blank">

@@ -4,50 +4,53 @@ import { ThemeContext } from "../../contexts/ThemeContext"
 import './Portfolio.css'
 import ProjectCard from "../ProjectCard/ProjectCard"
 
-
 const Portfolio = () => {
     const {theme} = useContext(ThemeContext)
 
     const projects = [
         {
             title: "To Do App",
-            summary: "Brief summary about project here",
-            src: "",
-            alt: "project image",
+            src: theme === 'light' ? 'src/assets/toDo/to-do.png' : 'src/assets/toDo/to-do-dark.png',
+            alt: "to-do app",
             GitHubURL: "https://github.com/liangkathy/To-Do-App",
-            URL: "#",
+            URL: "https://kathy-liang-to-do.netlify.app/",
             id: "project1",
-            longSummary: "Extra details about the project here with more details and in depth explanation of project"
+            longSummary: "Extra details about the project here with more details and in depth explanation of project",
+            video: theme === 'light' ? 'src/assets/toDo/todo-demo.mp4' : 'src/assets/toDo/todo-demo-dark.mp4',
+            tags: ["React"]
         },
         {
             title: "Animal Shelter Site",
-            summary: "Brief summary about project here",
             src: "",
             alt: "project image",
             GitHubURL: "https://github.com/liangkathy/Animal-Shelter",
             URL: "#",
             id: "project2",
-            longSummary: "Extra details about the project here with more details and in depth explanation of project"
+            longSummary: "Extra details about the project here with more details and in depth explanation of project",
+            video: "",
+            tags: ["React", "Spring Boot"]
         },
         {
             title: "Blog Site",
-            summary: "Brief summary about project here",
-            src: "",
-            alt: "project image",
+            src: theme === 'light' ? 'src/assets/blog/blog.png' : 'src/assets/blog/blog-dark.png',
+            alt: "blog site",
             GitHubURL: "https://github.com/liangkathy/Blog",
             URL: "#",
             id: "project3",
-            longSummary: "Extra details about the project here with more details and in depth explanation of project"
+            longSummary: "Note: Frontend and backend are not currently connected",
+            video: theme === 'light' ? 'src/assets/blog/blog-demo.mp4' : 'src/assets/blog/blog-demo-dark.mp4',
+            tags: ["Javascript", "HTML", "CSS", "Spring Boot"]
         },
         {
             title: "Dictionary App",
-            summary: "Brief summary about project here",
-            src: "",
-            alt: "project image",
+            src: "src/assets/dictionary/dictionary.png",
+            alt: "dictionary CLI",
             GitHubURL: "https://github.com/liangkathy/Java-Dictionary-App",
             URL: "",
             id: "project4",
-            longSummary: "Extra details about the project here with more details and in depth explanation of project"
+            longSummary: "Extra details about the project here with more details and in depth explanation of project",
+            video: "src/assets/dictionary/dictionary-demo.mp4",
+            tags: ["Java"]
         }
     ]
 
@@ -60,12 +63,13 @@ const Portfolio = () => {
                         return <ProjectCard key={i} 
                                 id={project.id}
                                 title={project.title}
-                                summary={project.summary}
                                 src={project.src}
                                 alt={project.alt} 
                                 GitHubURL={project.GitHubURL}
                                 URL={project.URL} 
-                                long={project.longSummary} />
+                                long={project.longSummary}
+                                video={project.video}
+                                tags={project.tags} />
                     })
                 }
             </div>

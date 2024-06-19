@@ -1,19 +1,31 @@
 import Desk from "../../components/Desk/Desk"
-
 import { useContext } from "react"
 import { ThemeContext } from "../../contexts/ThemeContext"
-
 import './Home.css'
+import { useGSAP } from "@gsap/react"
+import gsap from "gsap"
 
 
 const Home = () => {
     const {theme} = useContext(ThemeContext)
 
+    useGSAP(() => {
+        gsap.fromTo('#main-title', {
+            opacity: 0,
+            y: -50,
+        }, 
+        {
+            opacity: 1,
+            duration: 2,
+            y: 0,
+        })
+    },[])
+
     return (
         <section id="home" className={`home-section home-${theme}`}>
-            <div className="home-intro">
+            <div id="main-title" className="home-intro">
                 <h2>Hi, my name is Kathy</h2>
-                <div>Welcome to my portfolio</div>
+                <div className="home-subtitle">Welcome to my portfolio</div>
             </div>
             <div className="desk-container">
                 <Desk />
