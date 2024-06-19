@@ -4,19 +4,32 @@ import { ThemeContext } from "../../contexts/ThemeContext"
 import './Portfolio.css'
 import ProjectCard from "../ProjectCard/ProjectCard"
 
+import toDo from '../../assets/toDo/to-do.png'
+import toDoDark from '../../assets/toDo/to-do-dark.png'
+import toDoVideo from '../../assets/toDo/todo-demo.mp4'
+import toDoVideoDark from '../../assets/toDo/todo-demo-dark.mp4'
+
+import blog from '../../assets/blog/blog.png'
+import blogDark from '../../assets/blog/blog-dark.png'
+import blogVideo from '../../assets/blog/blog-demo.mp4'
+import blogVideoDark from '../../assets/blog/blog-demo-dark.mp4'
+
+import dictionary from '../../assets/dictionary/dictionary.png'
+import dictionaryVideo from '../../assets/dictionary/dictionary-demo.mp4'
+
 const Portfolio = () => {
     const {theme} = useContext(ThemeContext)
 
     const projects = [
         {
             title: "To Do App",
-            src: theme === 'light' ? 'src/assets/toDo/to-do.png' : 'src/assets/toDo/to-do-dark.png',
+            src: theme === 'light' ? toDo : toDoDark,
             alt: "to-do app",
             GitHubURL: "https://github.com/liangkathy/To-Do-App",
             URL: "https://kathy-liang-to-do.netlify.app/",
             id: "project1",
             longSummary: "Extra details about the project here with more details and in depth explanation of project",
-            video: theme === 'light' ? 'src/assets/toDo/todo-demo.mp4' : 'src/assets/toDo/todo-demo-dark.mp4',
+            video: theme === 'light' ? toDoVideo : toDoVideoDark,
             tags: ["React"]
         },
         {
@@ -32,24 +45,24 @@ const Portfolio = () => {
         },
         {
             title: "Blog Site",
-            src: theme === 'light' ? 'src/assets/blog/blog.png' : 'src/assets/blog/blog-dark.png',
+            src: theme === 'light' ? blog : blogDark,
             alt: "blog site",
             GitHubURL: "https://github.com/liangkathy/Blog",
             URL: "#",
             id: "project3",
             longSummary: "Note: Frontend and backend are not currently connected",
-            video: theme === 'light' ? 'src/assets/blog/blog-demo.mp4' : 'src/assets/blog/blog-demo-dark.mp4',
+            video: theme === 'light' ? blogVideo : blogVideoDark,
             tags: ["Javascript", "HTML", "CSS", "Spring Boot"]
         },
         {
             title: "Dictionary App",
-            src: "src/assets/dictionary/dictionary.png",
+            src: dictionary,
             alt: "dictionary CLI",
             GitHubURL: "https://github.com/liangkathy/Java-Dictionary-App",
             URL: "",
             id: "project4",
             longSummary: "Extra details about the project here with more details and in depth explanation of project",
-            video: "src/assets/dictionary/dictionary-demo.mp4",
+            video: dictionaryVideo,
             tags: ["Java"]
         }
     ]
