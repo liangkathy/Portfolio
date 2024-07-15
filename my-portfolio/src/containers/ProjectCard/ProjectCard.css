@@ -8,7 +8,7 @@
     position: relative;
     top: 0;
     transition: top ease 0.5s;
-    width: 550px;
+    width: 340px;
 }
 
 .card-left {
@@ -39,38 +39,6 @@
     background-color: rgba(235, 189, 203, 0.8);
 }
 
-/* #project1-light {
-    background-color: rgb(210, 234, 247);
-}
-
-#project1-dark {
-    background-color: #3d4e6aff;
-}
-
-#project2-light {
-    background-color: #d1abb7ff;
-}
-
-#project2-dark {
-    background-color: #97344b;
-}
-
-#project3-light {
-    background-color: #f8c0a0;
-}
-
-#project3-dark {
-    background-color: #b46361;
-}
-
-#project4-light {
-    background-color: #BDCDD0;
-}
-
-#project4-dark {
-    background-color: #392645;
-} */
-
 .project-buttons {
     display: flex;
     gap: 30px;
@@ -89,8 +57,9 @@
     justify-content: center;
     gap: 10px;
     border-radius: 50px;
-    padding: 40px 70px 40px 70px;
     position: relative;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .long-summary {
@@ -108,4 +77,31 @@
     position: absolute;
     top: 20px;
     left: 20px;
+}
+
+.close-words {
+    display: none;
+}
+
+.project-img {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    .project-card {
+        width: 550px;
+    }
+
+    .project-details {
+        padding: 40px 70px 40px 70px;
+    }
+
+    .project-img {
+        display: block;
+        border-radius: 8px;
+    }
+
+    .close-words {
+        display: block;
+    }
 }

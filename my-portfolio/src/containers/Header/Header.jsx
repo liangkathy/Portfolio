@@ -1,7 +1,7 @@
 
 import NavBar from "../../components/NavBar/NavBar"
 
-import { useContext, useState, useEffect } from "react"
+import { useContext, useState, useEffect, useLayoutEffect } from "react"
 import { ThemeContext } from "../../contexts/ThemeContext"
 import { DarkModeSwitch } from "react-toggle-dark-mode";
 
@@ -38,6 +38,28 @@ const Header = () => {
         setIsNavOpen(!isNavOpen)
         setIsHamburgerOpen(!isHamburgerOpen)
     }
+
+    //ensure hamburger menu and nav close when screen size is over 768px
+    const [windowSize, setWindowSize] = useState(window.innerWidth)
+
+    useLayoutEffect(() => {
+        const updateSize = () => {
+            setWindowSize(window.innerWidth)
+        }
+
+        window.addEventListener('resize', updateSize)
+        updateSize()
+        
+        //clean up and remove event listener
+        return () => removeEventListener('resize', updateSize)
+    },[])
+
+    useEffect(() => {
+        if (windowSize >= 768) {
+            setIsNavOpen(false)
+            setIsHamburgerOpen(false)
+        }
+    },[windowSize])
 
     return (
         <header className="header">

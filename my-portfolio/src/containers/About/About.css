@@ -10,8 +10,14 @@
 
 .about-content {
     margin: 50px;
-    padding-top: 150px;
-    padding-bottom: 150px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.about-me-text {
+    font-size: 1.2em;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .about-links {

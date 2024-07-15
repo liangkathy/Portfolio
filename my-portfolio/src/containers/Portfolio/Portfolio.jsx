@@ -17,6 +17,10 @@ import blogVideoDark from '../../assets/blog/blog-demo-dark.mp4'
 import dictionary from '../../assets/dictionary/dictionary.png'
 import dictionaryVideo from '../../assets/dictionary/dictionary-demo.mp4'
 
+import shelter from '../../assets/animalshelter/shelter.png'
+import shelterDark from '../../assets/animalshelter/shelter-dark.png'
+import shelterVideo from '../../assets/animalshelter/shelter.mp4'
+
 const Portfolio = () => {
     const {theme} = useContext(ThemeContext)
 
@@ -34,13 +38,13 @@ const Portfolio = () => {
         },
         {
             title: "Animal Shelter Site",
-            src: "",
+            src: theme === 'light' ? shelter : shelterDark,
             alt: "project image",
             GitHubURL: "https://github.com/liangkathy/Animal-Shelter",
             URL: "#",
             id: "project2",
             longSummary: "Extra details about the project here with more details and in depth explanation of project",
-            video: "",
+            video: shelterVideo,
             tags: ["React", "Spring Boot"]
         },
         {
@@ -48,7 +52,7 @@ const Portfolio = () => {
             src: theme === 'light' ? blog : blogDark,
             alt: "blog site",
             GitHubURL: "https://github.com/liangkathy/Blog",
-            URL: "#",
+            URL: "",
             id: "project3",
             longSummary: "Note: Frontend and backend are not currently connected",
             video: theme === 'light' ? blogVideo : blogVideoDark,

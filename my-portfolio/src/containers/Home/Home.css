@@ -14,12 +14,16 @@
 }
 
 .home-intro {
-    padding: 100px;
+    padding: 50px;
     font-size: 1.45em;
 }
 
+.home-subtitle {
+    font-size: 1em;
+}
+
 h2 {
-    font-size: 2.25em;
+    font-size: 1.8em;
 }
 
 .wave1 {
@@ -51,4 +55,19 @@ h2 {
     .home-section {
         max-height: 950px;
     }
+}
+
+@media screen and (min-width: 500px) {
+    h2 {
+        font-size: 2.25em;
+    }
+
+    .home-subtitle {
+        font-size: 1.2em;
+    }
+
+    .home-intro {
+        padding: 100px;
+    }
+    
 }
