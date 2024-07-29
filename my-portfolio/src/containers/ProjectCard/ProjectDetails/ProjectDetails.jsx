@@ -13,6 +13,13 @@ const ProjectDetails = ({id, title, long, src, alt, GitHubURL, URL, toggleExpand
         <div id={`${id}-${theme}`} className={`project-details card-${theme}`}>
             <Link className={`${theme}-link close-details`} onClick={toggleExpand}><IoClose size="1.5em"/><span className='close-words'>Close details</span></Link>
             <h4 className='project-title'>{title}</h4>
+            <div className='project-tags'>
+                {
+                    tags.map((tag, i) => {
+                        return <div key={i} className={`project-tag tag-${theme}`}>{tag}</div>
+                    })
+                }
+            </div>
             {
                 video != "" ?
                 <video width="75%"
