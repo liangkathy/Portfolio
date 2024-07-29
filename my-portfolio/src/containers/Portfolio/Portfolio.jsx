@@ -32,7 +32,7 @@ const Portfolio = () => {
             GitHubURL: "https://github.com/liangkathy/To-Do-App",
             URL: "https://kathy-liang-to-do.netlify.app/",
             id: "project1",
-            longSummary: "Extra details about the project here with more details and in depth explanation of project",
+            longSummary: "This app can track your to-do list items. Tasks can be added, deleted, or marked as completed. Any tasks and their status will be tracked in the History tab and are searchable from the Search tab.",
             video: theme === 'light' ? toDoVideo : toDoVideoDark,
             tags: ["React"]
         },
@@ -43,9 +43,9 @@ const Portfolio = () => {
             GitHubURL: "https://github.com/liangkathy/Animal-Shelter",
             URL: "#",
             id: "project2",
-            longSummary: "Extra details about the project here with more details and in depth explanation of project",
+            longSummary: "This is my capstone project that connects a backend database to the frontend animal shelter site. It utilizes Spring Security to generate a JSON Web Token to identify a user as an admin. If logged in with admin access, the user has additional tools from the Admin Home page and can masquerade as a regular user viewing the site.",
             video: shelterVideo,
-            tags: ["React", "Spring Boot"]
+            tags: ["React", "CSS", "Spring Boot", "Spring Security"]
         },
         {
             title: "Blog Site",
@@ -54,7 +54,7 @@ const Portfolio = () => {
             GitHubURL: "https://github.com/liangkathy/Blog",
             URL: "",
             id: "project3",
-            longSummary: "Note: Frontend and backend are not currently connected",
+            longSummary: "This is my inclusive blog app for users to connect to their community. The frontend also includes a trivia mini-game when viewed in full screen. Note: Frontend and backend are not currently connected so the official blog site has not been deployed yet.",
             video: theme === 'light' ? blogVideo : blogVideoDark,
             tags: ["Javascript", "HTML", "CSS", "Spring Boot"]
         },
@@ -65,7 +65,7 @@ const Portfolio = () => {
             GitHubURL: "https://github.com/liangkathy/Java-Dictionary-App",
             URL: "",
             id: "project4",
-            longSummary: "Extra details about the project here with more details and in depth explanation of project",
+            longSummary: "This dictionary app allows users to look up words, add and delete words from the dictionary, and also includes a random word generator.",
             video: dictionaryVideo,
             tags: ["Java"]
         }
