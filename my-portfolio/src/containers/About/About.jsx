@@ -12,9 +12,10 @@ const About = () => {
         <section id="about" className={`about-section about-${theme}`}>
 
             <div className="about-content">
-                <h3>About me</h3>
-                <p className="about-me-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                <p className="about-me-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <h3>About me</h3> 
+                <p className="about-me-text">I’m an aspiring software engineer coming from a non-traditional background with a bachelors degree in pre-med biology from UT Austin. My shift in career path led me to Indeed where I was a Client Success Specialist for over 2 years and discovered my interest in technology and software development.</p>
+                
+                <p className="about-me-text">Outside of work, I enjoy doing my nails, puzzles, traveling, and hanging out with my two cats (Snickers and Mochi).</p>
                 
 
                 <div className="about-links">
