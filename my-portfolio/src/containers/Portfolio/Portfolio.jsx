@@ -41,7 +41,7 @@ const Portfolio = () => {
             src: theme === 'light' ? shelter : shelterDark,
             alt: "project image",
             GitHubURL: "https://github.com/liangkathy/Animal-Shelter",
-            URL: "#",
+            URL: "",
             id: "project2",
             longSummary: "This is my capstone project that connects a backend database to the frontend animal shelter site. It utilizes Spring Security to generate a JSON Web Token to identify a user as an admin. If logged in with admin access, the user has additional tools from the Admin Home page and can masquerade as a regular user viewing the site.",
             video: shelterVideo,
